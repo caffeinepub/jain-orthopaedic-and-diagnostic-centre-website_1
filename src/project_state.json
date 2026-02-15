@@ -1,0 +1,202 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 9,
+  "summary": "Build a professional, mobile-friendly 3-page website for Jain Orthopaedic and Diagnostic Centre (English + Hindi) with specified branding, sections, and integrations (WhatsApp, Call Now, Google Maps), plus SEO and SSL considerations.",
+  "architectural_notes": [
+    "Site structure: 3 pages (Home, About/Doctor Profile, Services & Contact) with max 5–6 sections per page",
+    "Responsive/mobile-first design with prominent 'Call Now' and WhatsApp appointment CTAs",
+    "Branding: white background, soft blue #4A90E2 headers, green #7ED321 accent buttons; rounded buttons with hover effects",
+    "Typography: Montserrat Bold for headings; Lato Regular for body text",
+    "Include Google Maps embed for clinic location and social proof (4.7 rating, 390 reviews)",
+    "Bilingual content support (English + Hindi)",
+    "SEO-friendly heading structure and SSL/HTTPS integration requirement",
+    "Asset constraint: use only the two provided photos (no additional images)",
+    "Design refinement pass requested: enhance visual appeal via improved spacing/layout, typography hierarchy, card/section styling, and subtle animations—without changing site structure or adding new image assets."
+  ],
+  "known_issues": [
+    "Duplicate WhatsApp icon appears twice on the site (should be single WhatsApp CTA/icon).",
+    "\"Get Directions\" button label/text is not centered; needs centered font alignment.",
+    "Deployment/build is failing during deployment (error details not provided yet); needs build/deployment logs to diagnose and fix."
+  ],
+  "isFixRequest": true,
+  "existing_features": [
+    {
+      "id": "feature-create-a-responsive-3-page-marketing-website-for-jain-orthopaedic-and-diagnostic-centre-with-clear-top-navigation-linking-to-home-about-doctors-and-services-contact-keeping-each-page-to-a-maximum-of-5-6-sections",
+      "title": "Create a responsive 3-page marketing website for \"Jain Orthopaedic and Diagnostic Centre\" with clear top navigation linking to Home, About/Doctors, and Services & Contact, keeping each page to a maximum of 5–6 sections.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-the-provided-brand-design-system-consistently-white-background-soft-blue-4a90e2-for-headers-primary-highlights-green-7ed321-for-accent-buttons-headings-use-montserrat-bold-and-body-text-uses-lato-regular-ctas-use-rounded-corners-with-hover-animations",
+      "title": "Apply the provided brand/design system consistently: white background, soft blue (#4A90E2) for headers/primary highlights, green (#7ED321) for accent buttons; headings use Montserrat (bold) and body text uses Lato (regular); CTAs use rounded corners with hover animations.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-use-only-the-two-user-uploaded-photos-image-png-and-image-1-png-as-photographic-content-on-the-website-do-not-introduce-any-additional-photos-stock-images-if-icons-are-needed-use-inline-svg-icons-not-image-files",
+      "title": "Use only the two user-uploaded photos (image.png and image-1.png) as photographic content on the website; do not introduce any additional photos/stock images. If icons are needed, use inline SVG icons (not image files).",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-home-page-sections-with-the-provided-clinic-details-1-hero-featuring-one-of-the-provided-photos-headline-with-clinic-name-and-a-short-welcome-mentioning-dr-s-k-jain-dr-prerna-jain-2-social-proof-block-highlighting-google-rating-4-7-5-and-390-reviews-plus-2-3-testimonial-snippets-3-quick-services-overview-with-icons-for-orthopedic-care-bone-joint-treatment-diagnostics-and-optionally-physiotherapy-guidance-4-prominent-whatsapp-appointment-cta-5-embedded-google-map-for-the-clinic-address-6-call-now-cta-optimized-for-mobile",
+      "title": "Implement the Home page sections with the provided clinic details: (1) Hero featuring one of the provided photos, headline with clinic name and a short welcome mentioning Dr. S.K. Jain & Dr. Prerna Jain; (2) Social proof block highlighting Google rating 4.7/5 and 390 reviews plus 2–3 testimonial snippets; (3) Quick services overview with icons for Orthopedic care, Bone & joint treatment, Diagnostics (and optionally physiotherapy guidance); (4) Prominent WhatsApp appointment CTA; (5) Embedded Google Map for the clinic address; (6) \"Call Now\" CTA optimized for mobile.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-about-doctor-profile-page-containing-doctor-profiles-for-dr-s-k-jain-and-dr-prerna-jain-qualifications-experience-specialization-fields-present-even-if-content-is-concise-clinic-story-mission-highlights-for-hygiene-staff-professionalism-positive-atmosphere-and-the-provided-patient-review-highlights-optionally-include-a-small-gallery-section-using-only-the-two-provided-photos",
+      "title": "Implement the About/Doctor Profile page containing: doctor profiles for Dr. S.K. Jain and Dr. Prerna Jain (qualifications/experience/specialization fields present even if content is concise), clinic story/mission, highlights for hygiene/staff professionalism/positive atmosphere, and the provided patient review highlights. Optionally include a small gallery section using only the two provided photos.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-services-contact-page-with-a-detailed-services-list-orthopedic-consultation-bone-joint-treatment-minor-diagnostics-physiotherapy-guidance-an-appointment-widget-simple-form-or-button-that-enables-whatsapp-booking-full-contact-details-phone-whatsapp-working-hours-10-am-7-pm-monday-saturday-closed-sunday-address-and-an-embedded-google-map-optionally-include-an-faq-section-for-common-patient-questions",
+      "title": "Implement the Services & Contact page with: a detailed services list (Orthopedic consultation, bone & joint treatment, minor diagnostics, physiotherapy guidance), an appointment widget (simple form or button) that enables WhatsApp booking, full contact details (phone/WhatsApp), working hours (10 AM–7 PM Monday–Saturday; closed Sunday), address, and an embedded Google Map. Optionally include an FAQ section for common patient questions.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-bilingual-support-english-hindi-for-key-clinic-identity-elements-display-the-hindi-clinic-name-alongside-the-english-clinic-name-and-provide-a-simple-language-toggle-en-that-swaps-core-labels-headings-and-ctas-where-feasible",
+      "title": "Add bilingual support (English + Hindi) for key clinic identity elements: display the Hindi clinic name \"जैन ऑर्थोपेडिक एंड डायग्नोस्टिक सेंटर दर स.के. जैन, दर प्रेरणा जैन\" alongside the English clinic name and provide a simple language toggle (EN/हिं) that swaps core labels/headings and CTAs where feasible.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-site-wide-ctas-and-footer-persistent-whatsapp-button-clear-call-and-get-directions-actions-and-a-footer-that-includes-clinic-address-phone-number-whatsapp-button-and-a-link-to-open-the-map-location-in-a-new-tab",
+      "title": "Implement site-wide CTAs and footer: persistent WhatsApp button, clear \"Call\" and \"Get Directions\" actions, and a footer that includes clinic address, phone number, WhatsApp button, and a link to open the map location in a new tab.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-basic-seo-friendly-structure-unique-page-titles-and-meta-descriptions-per-page-semantic-headings-one-h1-per-page-and-on-page-social-proof-4-7-star-rating-and-390-reviews-displayed-at-least-on-home-and-optionally-repeated-elsewhere",
+      "title": "Add basic SEO-friendly structure: unique page titles and meta descriptions per page, semantic headings (one H1 per page), and on-page social proof (4.7-star rating and 390 reviews) displayed at least on Home (and optionally repeated elsewhere).",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-accessibility-and-mobile-usability-appropriate-color-contrast-keyboard-focus-states-for-interactive-elements-tap-friendly-button-sizes-and-responsive-layout-for-common-breakpoints",
+      "title": "Ensure accessibility and mobile usability: appropriate color contrast, keyboard focus states for interactive elements, tap-friendly button sizes, and responsive layout for common breakpoints.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-coherent-modern-visual-theme-consistent-with-the-clinic-domain-calm-clinical-trustworthy-using-the-provided-color-palette-and-typography-including-consistent-spacing-section-dividers-and-card-styles-avoid-adding-new-product-features-beyond-the-requested-sections",
+      "title": "Add a coherent, modern visual theme consistent with the clinic domain (calm, clinical, trustworthy) using the provided color palette and typography, including consistent spacing, section dividers, and card styles; avoid adding new product features beyond the requested sections.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-improve-the-overall-visual-polish-across-all-three-pages-home-about-doctors-services-contact-by-refining-spacing-alignment-typographic-hierarchy-and-section-composition-while-keeping-the-existing-content-and-structure-intact",
+      "title": "Improve the overall visual polish across all three pages (Home, About/Doctors, Services & Contact) by refining spacing, alignment, typographic hierarchy, and section composition while keeping the existing content and structure intact.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-enhance-the-header-navigation-styling-to-feel-more-premium-and-modern-e-g-improved-active-state-hover-states-spacing-and-subtle-depth-without-changing-navigation-behavior-or-adding-new-routes",
+      "title": "Enhance the header/navigation styling to feel more premium and modern (e.g., improved active state, hover states, spacing, and subtle depth) without changing navigation behavior or adding new routes.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-refine-card-button-and-cta-styling-to-look-more-cohesive-and-high-quality-consistent-corner-radii-shadows-borders-hover-focus-micro-interactions-while-staying-within-the-existing-brand-palette-and-typography",
+      "title": "Refine card, button, and CTA styling to look more cohesive and high-quality (consistent corner radii, shadows, borders, hover/focus micro-interactions), while staying within the existing brand palette and typography.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-upgrade-section-backgrounds-and-transitions-for-a-more-attractive-look-e-g-subtle-gradients-dividers-or-decorative-shapes-patterns-implemented-via-css-svg-without-introducing-any-new-photographic-assets",
+      "title": "Upgrade section backgrounds and transitions for a more attractive look (e.g., subtle gradients, dividers, or decorative shapes/patterns implemented via CSS/SVG) without introducing any new photographic assets.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-polish-the-footer-and-floating-whatsapp-button-presentation-to-better-match-the-refreshed-design-spacing-typography-hover-focus-states-keeping-the-same-actions-and-links",
+      "title": "Polish the footer and floating WhatsApp button presentation to better match the refreshed design (spacing, typography, hover/focus states), keeping the same actions and links.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-duplicate-whatsapp-icon-from-the-footer-quick-actions-whatsapp-button-so-that-only-a-single-whatsapp-icon-is-displayed-next-to-the-label",
+      "title": "Remove the duplicate WhatsApp icon from the Footer \"Quick Actions\" WhatsApp button so that only a single WhatsApp icon is displayed next to the label.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-center-the-content-icon-text-within-the-get-directions-button-so-that-the-label-is-visually-centered-horizontally-inside-the-full-width-button-including-in-the-footer-quick-actions-section",
+      "title": "Center the content (icon + text) within the \"Get Directions\" button so that the label is visually centered horizontally inside the full-width button, including in the Footer \"Quick Actions\" section.",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-duplicate-whatsapp-icon-in-the-footer-quick-actions-whatsapp-button-so-only-a-single-whatsapp-icon-is-rendered-next-to-the-label",
+      "title": "Remove the duplicate WhatsApp icon in the Footer \"Quick Actions\" WhatsApp button so only a single WhatsApp icon is rendered next to the label.",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-the-footer-quick-actions-get-directions-button-content-icon-text-is-horizontally-centered-within-the-full-width-button-at-all-screen-sizes",
+      "title": "Ensure the Footer \"Quick Actions\" \"Get Directions\" button content (icon + text) is horizontally centered within the full-width button at all screen sizes.",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a clean, modern, responsive 3-page orthopedic clinic website (Home, About/Doctors, Services & Contact) using provided clinic content, bilingual support, WhatsApp/Call buttons, Google Map embed, social proof, SEO-friendly headings, and SSL/HTTPS guidance; use only the two provided photos.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Refine the site’s visual design to be more attractive (improve layout, spacing, typography hierarchy, section styling, and tasteful micro-interactions) while staying within the existing brand palette, 3-page structure, and the constraint of using only the two provided photos.",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Jain Orthopaedic and Diagnostic Centre Website",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

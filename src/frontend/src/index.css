@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Lato:wght@300;400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.75rem;
+        
+        /* Primary: Soft Blue #4A90E2 */
+        --primary: 0.65 0.15 250;
+        --primary-foreground: 1 0 0;
+        
+        /* Accent: Green #7ED321 */
+        --accent: 0.78 0.18 130;
+        --accent-foreground: 0.2 0 0;
+        
+        /* Background & Surfaces */
+        --background: 1 0 0;
+        --foreground: 0.2 0 0;
+        --card: 1 0 0;
+        --card-foreground: 0.2 0 0;
+        --popover: 1 0 0;
+        --popover-foreground: 0.2 0 0;
+        
+        /* Secondary & Muted */
+        --secondary: 0.96 0.01 250;
+        --secondary-foreground: 0.3 0 0;
+        --muted: 0.96 0.01 250;
+        --muted-foreground: 0.5 0 0;
+        
+        /* Borders & Inputs */
+        --border: 0.9 0.01 250;
+        --input: 0.9 0.01 250;
+        --ring: 0.65 0.15 250;
+        
+        /* Destructive */
+        --destructive: 0.55 0.22 25;
+        --destructive-foreground: 1 0 0;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+    }
+    
+    h1 {
+        @apply text-4xl md:text-5xl lg:text-6xl;
+    }
+    
+    h2 {
+        @apply text-3xl md:text-4xl lg:text-5xl;
+    }
+    
+    h3 {
+        @apply text-xl md:text-2xl;
+    }
+}
+
+@layer utilities {
+    .font-heading {
+        font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    
+    .font-body {
+        font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    
+    /* Decorative Background Utilities */
+    .bg-gradient-soft {
+        background: linear-gradient(135deg, oklch(0.98 0.01 250) 0%, oklch(0.96 0.02 130) 100%);
+    }
+    
+    .bg-gradient-primary {
+        background: linear-gradient(135deg, oklch(0.65 0.15 250) 0%, oklch(0.55 0.18 240) 100%);
+    }
+    
+    .bg-gradient-accent {
+        background: linear-gradient(135deg, oklch(0.78 0.18 130) 0%, oklch(0.68 0.20 140) 100%);
+    }
+    
+    .bg-pattern-dots {
+        background-image: radial-gradient(circle, oklch(0.9 0.01 250 / 0.3) 1px, transparent 1px);
+        background-size: 20px 20px;
+    }
+    
+    .section-divider-wave {
+        position: relative;
+    }
+    
+    .section-divider-wave::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 60px;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='%23ffffff'/%3E%3C/svg%3E") no-repeat;
+        background-size: cover;
+    }
+}
+
+@layer components {
+    /* Button Styles */
+    .btn-primary {
+        @apply bg-primary hover:bg-primary/90 text-white px-8 py-3.5 rounded-full font-semibold transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-primary/40 active:translate-y-0;
+    }
+    
+    .btn-secondary {
+        @apply bg-secondary hover:bg-secondary/90 text-primary px-8 py-3.5 rounded-full font-semibold transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-primary/30 border-2 border-primary/20 active:translate-y-0;
+    }
+    
+    .btn-accent {
+        @apply bg-accent hover:bg-accent/90 text-white px-8 py-3.5 rounded-full font-semibold transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-accent/40 active:translate-y-0;
+    }
+    
+    /* Header & Navigation Styles */
+    .nav-link {
+        @apply font-semibold transition-all duration-200 px-3 py-2 rounded-lg relative;
+    }
+    
+    .nav-link-active {
+        @apply text-primary bg-primary/5;
+    }
+    
+    .nav-link-active::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 24px;
+        height: 3px;
+        background: oklch(var(--primary));
+        border-radius: 2px;
+    }
+    
+    .nav-link-inactive {
+        @apply text-gray-700 hover:text-primary hover:bg-gray-50;
+    }
+    
+    /* Card Hover Effects */
+    .service-card {
+        @apply transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 cursor-pointer;
+    }
+    
+    .service-detail-card {
+        @apply transition-all duration-300 hover:shadow-xl hover:border-primary/30 hover:-translate-y-1;
+    }
+    
+    .testimonial-card {
+        @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+    }
+    
+    .doctor-card {
+        @apply transition-all duration-300 hover:shadow-2xl hover:-translate-y-2;
+    }
+    
+    .review-card {
+        @apply transition-all duration-300 hover:shadow-xl hover:border-l-4 hover:border-l-primary hover:-translate-x-1;
+    }
+    
+    .faq-card {
+        @apply transition-all duration-300 hover:shadow-lg hover:border-l-4 hover:border-l-accent hover:-translate-x-1;
+    }
+    
+    /* Form Input Styles */
+    .form-input {
+        @apply w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-200;
+    }
+    
+    .form-textarea {
+        @apply w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-200 resize-none;
+    }
+    
+    /* Focus Visible Styles */
+    *:focus-visible {
+        @apply outline-none ring-2 ring-primary ring-offset-2;
+    }
+    
+    /* Link Styles */
+    a {
+        @apply transition-colors duration-200;
+    }
+    
+    /* Footer Styles */
+    .footer-link {
+        @apply text-gray-300 hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white/50 rounded px-1;
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Prevent Horizontal Overflow */
+body {
+    overflow-x: hidden;
+}
+
+/* Image Hover Effects */
+.image-hover-zoom {
+    @apply overflow-hidden;
+}
+
+.image-hover-zoom img {
+    @apply transition-transform duration-500 ease-out;
+}
+
+.image-hover-zoom:hover img {
+    @apply scale-105;
+}

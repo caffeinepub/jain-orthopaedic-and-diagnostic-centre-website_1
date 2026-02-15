@@ -1,0 +1,55 @@
+{
+  "kind": "build_request",
+  "title": "Fix duplicate WhatsApp icon and center Get Directions button label in Footer Quick Actions",
+  "priority": "high",
+  "requirements": [
+    {
+      "id": "REQ-19",
+      "text": "Remove the duplicate WhatsApp icon in the Footer \"Quick Actions\" WhatsApp button so only a single WhatsApp icon is rendered next to the label.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "recent-messages"
+        ],
+        "quotes": [
+          "how i can fix this"
+        ]
+      },
+      "acceptanceCriteria": [
+        "In the Footer Quick Actions section, the \"Book via WhatsApp\" button displays exactly one WhatsApp icon (not two).",
+        "The fix is implemented without adding any new image assets (use existing icon components only).",
+        "Other WhatsApp CTAs on the site (e.g., hero CTA, floating WhatsApp button) still render correctly and are not missing their intended icon."
+      ]
+    },
+    {
+      "id": "REQ-20",
+      "text": "Ensure the Footer \"Quick Actions\" \"Get Directions\" button content (icon + text) is horizontally centered within the full-width button at all screen sizes.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "recent-messages"
+        ],
+        "quotes": [
+          "how i can fix this"
+        ]
+      },
+      "acceptanceCriteria": [
+        "In the Footer Quick Actions section, the \"Get Directions\" button label is visually centered horizontally within the full-width button, including when an icon is present.",
+        "Button centering remains correct across common breakpoints (mobile and desktop) without changing the click behavior (still opens Google Maps in a new tab)."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not edit files under frontend/src/components/ui (shadcn components are read-only).",
+    "Keep the existing routes/navigation behavior unchanged.",
+    "Do not introduce any new photographic assets; continue using only the existing provided photos for photography."
+  ],
+  "nonGoals": [
+    "Diagnosing or fixing deployment/build pipeline errors (no deployment error logs were provided in the request).",
+    "Changing WhatsApp phone number, message content, or Google Maps destination behavior beyond alignment/icon rendering fixes."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

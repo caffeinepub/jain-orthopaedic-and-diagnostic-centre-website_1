@@ -1,0 +1,43 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Fix Footer Quick Actions icon duplication and button content centering",
+  "requirements": [
+    {
+      "id": "REQ-19",
+      "summary": "Remove duplicate WhatsApp icon in Footer Quick Actions so only one icon is shown next to the label.",
+      "acceptanceCriteria": [
+        "In the Footer Quick Actions section, the \"Book via WhatsApp\" button displays exactly one WhatsApp icon (not two).",
+        "The fix is implemented without adding any new image assets (use existing icon components only).",
+        "Other WhatsApp CTAs on the site (e.g., hero CTA, floating WhatsApp button) still render correctly and are not missing their intended icon."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/site/Footer.tsx",
+          "operation": "modify",
+          "description": "Remove the extra <SiWhatsapp> icon passed as a child to the Footer Quick Actions <WhatsAppLink> (since WhatsAppLink already renders a WhatsApp icon), and remove the unused SiWhatsapp import to ensure only one icon appears."
+        }
+      ]
+    },
+    {
+      "id": "REQ-20",
+      "summary": "Center the Footer Quick Actions Get Directions button content (icon + text) horizontally within the full-width button at all screen sizes.",
+      "acceptanceCriteria": [
+        "In the Footer Quick Actions section, the \"Get Directions\" button label is visually centered horizontally within the full-width button, including when an icon is present.",
+        "Button centering remains correct across common breakpoints (mobile and desktop) without changing the click behavior (still opens Google Maps in a new tab)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/site/GetDirectionsLink.tsx",
+          "operation": "modify",
+          "description": "Update the base button class list to include horizontal centering (e.g., add flex justification such as justify-center) so icon + text remain centered when the button is full width, while preserving the existing click behavior."
+        },
+        {
+          "path": "frontend/src/components/site/Footer.tsx",
+          "operation": "modify",
+          "description": "Verify the Footer Quick Actions <GetDirectionsLink> remains full-width and visually centered across breakpoints after the GetDirectionsLink centering adjustment, without changing navigation/routes or the Google Maps new-tab behavior."
+        }
+      ]
+    }
+  ]
+}

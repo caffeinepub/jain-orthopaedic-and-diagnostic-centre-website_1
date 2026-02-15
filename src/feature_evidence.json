@@ -1,0 +1,42 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-remove-the-duplicate-whatsapp-icon-in-the-footer-quick-actions-whatsapp-button-so-only-a-single-whatsapp-icon-is-rendered-next-to-the-label",
+      "featureTitle": "Remove the duplicate WhatsApp icon in the Footer \"Quick Actions\" WhatsApp button so only a single WhatsApp icon is rendered next to the label.",
+      "files": [
+        "frontend/src/components/site/Footer.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-19"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-ensure-the-footer-quick-actions-get-directions-button-content-icon-text-is-horizontally-centered-within-the-full-width-button-at-all-screen-sizes",
+      "featureTitle": "Ensure the Footer \"Quick Actions\" \"Get Directions\" button content (icon + text) is horizontally centered within the full-width button at all screen sizes.",
+      "files": [
+        "frontend/src/components/site/Footer.tsx",
+        "frontend/src/components/site/GetDirectionsLink.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-20"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
